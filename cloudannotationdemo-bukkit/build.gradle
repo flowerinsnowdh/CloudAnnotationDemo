@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+    id 'java-library'
+}
+
+group = 'online.flowerinsnow.cloudannotationdemo'
+
+repositories {
+    mavenCentral()
+
+    maven {
+        url 'https://hub.spigotmc.org/nexus/content/groups/public/'
+    }
+}
+
+dependencies {
+    api "org.incendo:cloud-core:${project.cloudcommandframework_version}"
+    api "org.incendo:cloud-paper:${project.cloudcommandframework_version}"
+    api "org.incendo:cloud-annotations:${project.cloudcommandframework_version}"
+    shadow 'org.spigotmc:spigot-api:1.20.4-R0.1-SNAPSHOT'
+}
+
+shadowJar {
+    relocate 'io.leangen.geantyref', 'online.flowerinsnow.cloudannotationsdemo.bukkit.shaded.io.leangen.geantyref'
+    relocate 'org.incendo.cloud', 'online.flowerinsnow.cloudannotationsdemo.bukkit.shaded.org.incendo.cloud'
+}

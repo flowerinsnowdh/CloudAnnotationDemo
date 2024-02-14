@@ -1,0 +1,2 @@
+rootProject.name = 'cloudannotationdemo'
+include 'cloudannotationdemo-bukkit'

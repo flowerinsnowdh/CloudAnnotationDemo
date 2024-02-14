@@ -1,0 +1,5 @@
+main: online.flowerinsnow.cloudannotationsdemo.bukkit.CloudAnnotationsDemoBukkit
+name: CloudAnnotationsDemoBukkit
+version: 1.0.0
+author: flowerinsnow
+api-version: 1.20

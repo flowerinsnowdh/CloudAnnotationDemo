@@ -1,0 +1,1 @@
+A demo of [cloud command framework](https://github.com/Incendo/cloud)
