@@ -29,6 +29,9 @@ public class CommandManager {
         annotationParser = new AnnotationParser<>(
                 manager, CommandSender.class
         );
+
+        registerCommands();
+        registerExceptionHandlers();
     }
 
     private void registerCommands() {
